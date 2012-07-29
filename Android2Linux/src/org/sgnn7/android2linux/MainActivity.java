@@ -1,7 +1,10 @@
 package org.sgnn7.android2linux;
 
+import org.sgnn7.android2linux.shell.ShellLauncher;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends Activity
 {
@@ -11,5 +14,8 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        TextView output_text = (TextView) findViewById(R.id.output);
+        output_text.setText(ShellLauncher.invoke("ls").toString());
     }
 }
