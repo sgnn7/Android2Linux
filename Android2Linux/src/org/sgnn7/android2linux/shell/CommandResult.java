@@ -1,8 +1,8 @@
 package org.sgnn7.android2linux.shell;
 
 public class CommandResult {
-	boolean hadErrors;
-	String output;
+	private final boolean hadErrors;
+	private final String output;
 
 	public CommandResult(int exitCode, String output) {
 		this.hadErrors = exitCode != 0;

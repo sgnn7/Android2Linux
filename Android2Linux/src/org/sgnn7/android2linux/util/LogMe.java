@@ -1,6 +1,8 @@
 package org.sgnn7.android2linux.util;
 
 import org.sgnn7.android2linux.BuildConfig;
+import org.sgnn7.android2linux.shell.CommandResult;
+
 import android.util.Log;
 
 //TODO test me
@@ -11,7 +13,7 @@ public class LogMe {
 
 	private static final LogLevels LOG_LEVEL = BuildConfig.DEBUG ? LogLevels.ERROR : LogLevels.ERROR;
 
-	private static final String PREFIX = "Ourobo";
+	private static final String PREFIX = "Android2Linux";
 
 	public static void e(String value) {
 		Log.e(PREFIX, value);
@@ -24,7 +26,7 @@ public class LogMe {
 		}
 		e(errorMessage);
 	}
-	
+
 	public static void e(String value, Exception e) {
 		e(value);
 		e(e);
@@ -60,5 +62,9 @@ public class LogMe {
 
 	private static boolean logLevelAllows(LogLevels level) {
 		return LOG_LEVEL.compareTo(level) >= 0;
+	}
+
+	public static void e(CommandResult result) {
+		e(result.toString());
 	}
 }
