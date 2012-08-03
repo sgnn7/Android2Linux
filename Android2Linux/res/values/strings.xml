@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android2Linux</string>
+    <string name="create_file">Create file</string>
+    <string name="mount_loop">Mount Loop</string>
+    <string name="format">Format</string>
+    <string name="mount_filesystem">Mount filesystem</string>
+</resources>

@@ -1,0 +1,47 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/file_size"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/file_size_names" />
+
+        <Button
+            android:id="@+id/create_file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_file" />
+
+        <Button
+            android:id="@+id/mount_loop_file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mount_loop" />
+
+        <Button
+            android:id="@+id/format_file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/format" />
+        
+        <Button
+            android:id="@+id/mount_filesystem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mount_filesystem" />
+        
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
