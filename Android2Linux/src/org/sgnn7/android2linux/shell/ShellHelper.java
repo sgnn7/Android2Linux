@@ -66,4 +66,7 @@ public class ShellHelper {
 
 		return result;
 	}
+
+	// umount /mnt/vfs
+	// losetup -d /dev/loop0
 }

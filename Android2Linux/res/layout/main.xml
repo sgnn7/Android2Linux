@@ -2,19 +2,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-    	<include  layout="@layout/breadcrumbs" android:id="@+id/breadcrumbs" />
-    	
+        <include
+            android:id="@+id/breadcrumbs"
+            layout="@layout/breadcrumbs" />
+
+        <!--
         <Spinner
             android:id="@+id/file_size"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:entries="@array/file_size_names" />
+        -->
+
+        <org.sgnn7.android2linux.widgets.FilesizeChooserView
+            android:id="@+id/file_size"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/create_file"
@@ -33,13 +41,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/format" />
-        
+
         <Button
             android:id="@+id/mount_filesystem"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/mount_filesystem" />
-        
 
         <TextView
             android:id="@+id/output"

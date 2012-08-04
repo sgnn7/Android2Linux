@@ -17,6 +17,10 @@
         <include
             android:id="@+id/breadcrumb_one"
             layout="@layout/breadcrumb" />
+
+        <include
+            android:id="@+id/breadcrumb_two"
+            layout="@layout/breadcrumb" />
     </LinearLayout>
 
     <RelativeLayout

@@ -2,12 +2,12 @@ package org.sgnn7.android2linux;
 
 import org.sgnn7.android2linux.shell.ShellHelper;
 import org.sgnn7.android2linux.shell.ShellLauncher;
+import org.sgnn7.android2linux.widgets.FilesizeChooserView;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -20,12 +20,13 @@ public class MainActivity extends Activity {
 		final TextView output_text = (TextView) findViewById(R.id.output);
 		output_text.setText(ShellLauncher.invoke("busybox").toString());
 
-		final Spinner spinner = (Spinner) findViewById(R.id.file_size);
+		final FilesizeChooserView spinner = (FilesizeChooserView) findViewById(R.id.file_size);
 		findViewById(R.id.create_file).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				int fileSize = getResources().getIntArray(R.array.file_size_values)[spinner.getSelectedItemPosition()];
-				ShellHelper.createFile("blah.test", fileSize);
+				// int fileSize =
+				// getResources().getIntArray(R.array.file_size_values)[spinner.getSelectedItemPosition()];
+				// ShellHelper.createFile("blah.test", fileSize);
 			}
 		});
 
