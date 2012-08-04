@@ -5,4 +5,6 @@
     <string name="mount_loop">Mount Loop</string>
     <string name="format">Format</string>
     <string name="mount_filesystem">Mount filesystem</string>
+    <string name="launch">Launch</string>
+    <string name="step_one">1</string>
 </resources>
