@@ -18,15 +18,13 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 
 		final TextView output_text = (TextView) findViewById(R.id.output);
-		output_text.setText(ShellLauncher.invoke("busybox").toString());
+		output_text.setText(ShellLauncher.invoke("busybox --list").toString());
 
-		final FilesizeChooserView spinner = (FilesizeChooserView) findViewById(R.id.file_size);
+		final FilesizeChooserView filesizeChooser = (FilesizeChooserView) findViewById(R.id.file_size);
 		findViewById(R.id.create_file).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// int fileSize =
-				// getResources().getIntArray(R.array.file_size_values)[spinner.getSelectedItemPosition()];
-				// ShellHelper.createFile("blah.test", fileSize);
+				ShellHelper.createFile("blah.test", filesizeChooser.getProgress());
 			}
 		});
 
@@ -48,6 +46,13 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				ShellHelper.mountFilesystem();
+			}
+		});
+
+		findViewById(R.id.install_bootstrapper).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ShellHelper.installBootstrapper();
 			}
 		});
 	}

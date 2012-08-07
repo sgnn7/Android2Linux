@@ -7,4 +7,5 @@
     <string name="mount_filesystem">Mount filesystem</string>
     <string name="launch">Launch It</string>
     <string name="step_one">#</string>
+    <string name="install_bootstrapper">Install bootstrapper</string>
 </resources>

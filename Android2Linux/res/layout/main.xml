@@ -48,6 +48,12 @@
             android:layout_height="wrap_content"
             android:text="@string/mount_filesystem" />
 
+        <Button
+            android:id="@+id/install_bootstrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/install_bootstrapper" />
+
         <TextView
             android:id="@+id/output"
             android:layout_width="fill_parent"
